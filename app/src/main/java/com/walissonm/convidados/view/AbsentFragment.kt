@@ -1,4 +1,4 @@
-package com.walissonm.convidados.ui
+package com.walissonm.convidados.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.walissonm.convidados.databinding.FragmentAbsentBinding
+import com.walissonm.convidados.viewModel.AbsentViewModel
 
 class AbsentFragment : Fragment() {
 

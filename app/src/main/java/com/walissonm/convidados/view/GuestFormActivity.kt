@@ -1,10 +1,12 @@
-package com.walissonm.convidados
+package com.walissonm.convidados.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
+import com.walissonm.convidados.R
 import com.walissonm.convidados.databinding.ActivityGuestFormBinding
+import com.walissonm.convidados.viewModel.GuestFormViewModel
 
 class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityGuestFormBinding

@@ -1,4 +1,4 @@
-package com.walissonm.convidados.ui
+package com.walissonm.convidados.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.walissonm.convidados.databinding.FragmentPresentBinding
+import com.walissonm.convidados.databinding.FragmentAllGuestBinding
+import com.walissonm.convidados.viewModel.AllGuestViewModel
 
-class PresentFragment : Fragment() {
+class AllGuestFragment : Fragment() {
 
-    private var _binding: FragmentPresentBinding? = null
+    private var _binding: FragmentAllGuestBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +23,14 @@ class PresentFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val presentViewModel =
-            ViewModelProvider(this).get(PresentViewModel::class.java)
+        val viewModel =
+            ViewModelProvider(this).get(AllGuestViewModel::class.java)
 
-        _binding = FragmentPresentBinding.inflate(inflater, container, false)
+        _binding = FragmentAllGuestBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        presentViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textHome
+        viewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
